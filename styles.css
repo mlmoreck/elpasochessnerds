@@ -21,18 +21,18 @@ body {
 }
 
 .hero-col-left {
-  border-top: 50px solid var(--turquoise);
+  border-top: 20px solid var(--turquoise);
   border-right: none;
-  border-bottom: 50px solid var(--turquoise);
-  border-left: 50px solid var(--turquoise);
+  border-bottom: 20px solid var(--turquoise);
+  border-left: 20px solid var(--turquoise);
 }
 
 .hero-col-right {
   background-color: white; /* not needed but just being thorough; this is what colors in the "negative white space" */
 
-  border-top: 50px solid var(--off-white);
-  border-right: 50px solid var(--off-white);
-  border-bottom: 50px solid var(--off-white);
+  border-top: 20px solid var(--off-white);
+  border-right: 20px solid var(--off-white);
+  border-bottom: 20px solid var(--off-white);
   border-left: none;
 
   align-self: stretch; /* not needed but just being thorough; this is what stretches out the "negative white space" height */
@@ -110,18 +110,18 @@ a {
 }
 
 .info-col-left {
-  border-top: 50px solid var(--off-white);
+  border-top: 20px solid var(--off-white);
   border-right: none;
-  border-bottom: 50px solid var(--off-white);
-  border-left: 50px solid var(--off-white);
+  border-bottom: 20px solid var(--off-white);
+  border-left: 20px solid var(--off-white);
 }
 
 .info-col-right {
   background-color: white; /* not needed but just being thorough; this is what colors in the "negative white space" */
 
-  border-top: 50px solid var(--turquoise);
-  border-right: 50px solid var(--turquoise);
-  border-bottom: 50px solid var(--turquoise);
+  border-top: 20px solid var(--turquoise);
+  border-right: 20px solid var(--turquoise);
+  border-bottom: 20px solid var(--turquoise);
   border-left: none;
 
   align-self: stretch; /* not needed but just being thorough; this is what stretches out the "negative white space" height */
