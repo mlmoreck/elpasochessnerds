@@ -2,6 +2,7 @@
   --midnight-blue: #191970;
   --turquoise: #40E0D0;
   --off-white: #b5b5b5;
+  --menu-background: #f9f4e0;
 }
 
 body {
@@ -187,4 +188,9 @@ a {
   /* background-color: var(--midnight-blue); */
   /* color: white; */
   transform: rotateY(180deg);
+}
+
+.menu .flip-card-front,
+.menu .flip-card-back {
+  background-color: var(--menu-background);
 }
