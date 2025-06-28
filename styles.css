@@ -3,6 +3,9 @@
   --turquoise: #40E0D0;
   --off-white: #b5b5b5;
   --menu-background: #f9f4e0;
+
+  --light-text: white;
+  --dark-text: var(--midnight-blue);
 }
 
 body {
@@ -86,9 +89,12 @@ h1 {
   color: var(--midnight-blue);
 }
 
-a {
-  color: black;
+.clickable-text {
+  color: var(--dark-text);
   text-decoration: none;
+}
+.clickable-text.loyalty-program-title-text {
+  color: black;
 }
 
 .bring-forward {
@@ -187,4 +193,29 @@ a {
 .menu .flip-card-front,
 .menu .flip-card-back {
   background-color: var(--menu-background);
+}
+
+.button {
+  text-decoration: none;
+  background-color: var(--turquoise);
+  border: 1.5px solid var(--midnight-blue);
+  color: var(--dark-text);
+  padding: 3px;
+  text-align: center;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: var(--midnight-blue);
+  color: var(--light-text);
+}
+
+#loyalty-why {
+  height: 100vh;
+  background-color: var(--midnight-blue);
+  color: white;
+}
+
+#loyalty-how {
+  height: 100vh;
+  background-color: var(--off-white);
 }
