@@ -15,7 +15,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .flex-container-columns {
@@ -193,6 +193,15 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+[data-page="loyalty-program"] .flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flip-card-back:not(.no-hover-cursor) :not(:empty) {
+  cursor: pointer;
+}
 
 .menu .flip-card-front,
 .menu .flip-card-back {
@@ -216,7 +225,8 @@ button,
   color: var(--dark-text);
   padding: 3px;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+  margin: 2px;
 }
 button:hover,
 .button:hover {

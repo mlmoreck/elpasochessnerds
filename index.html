@@ -89,12 +89,20 @@
                 <img src="./photos/flip-cards/loyalty-program-flip-card.jpg" class="img-cover-parent">
                 <div class="text-overlay">Loyalty Program</div>
               </div>
-              <div class="flip-card-back">
+              <div class="flip-card-back no-hover-cursor">
                 <div>
-                  <button>Join</button>
+                  <button class="join-loyalty-btn">Join</button>
                   <a class="button" href="./loyalty-program.html#loyalty-why">Our "Why"</a>
                   <a class="button" href="./loyalty-program.html#loyalty-how">How our loyalty program works</a>
-                  <button>Join</button>
+                </div>
+                <div id="loyalty-program-form-container" hidden>
+                  <form id="loyalty-program-form">
+                    <label for="phone">Phone:</label><input type="tel" name="phone" required>
+                    <label for="email">Email:</label><input type="email" name="email" required>
+                    <label for="guest_name">Name(optional):</label><input type="text" name="guest_name"><br>
+                    <label for="fun_fact">Fun fact(optional) for 20% off your next 5 drinks:</label><input type="text" name="fun_fact">
+                    <button type="submit">Submit</button>
+                  </form>
                 </div>
               </div>
             </div>
