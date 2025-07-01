@@ -51,9 +51,29 @@ app.post('/joinLoyaltyProgram', (req, res) => {
 			message: 'Error: form data not received or received in unexoected format.',
 		});
 	}
-	form_data['time_joined'] = new Date();
+
+	const now = new Date();
+	form_data['time_joined'] = format_date(now);
+
 	res.json(form_data);
 });
+
+function format_date(date){
+	const options = {
+		year: '2-digit',
+		month: 'numeric',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric',
+		timeZoneName: 'long',
+		timeZone: 'America/Denver'
+	};
+
+	const formatter = new Intl.DateTimeFormat('en-US', options);
+	const formattedDate = formatter.format(date);
+	
+	return formattedDate;
+}
 
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
