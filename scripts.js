@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  const url = 'http://localhost:8000';
+  
   $('.join-loyalty-btn').on('click', function(event){
     event.stopPropagation();
 
@@ -16,10 +18,47 @@ $(document).ready(function () {
       return obj;
     }, {});
 
-    form_data['time_joined'] = new Date();
+    // Do this in the backend instead if we end up having a backend server
+    // form_data['time_joined'] = new Date();
 
-    console.log(form_data);
+    fetch(url + '/joinLoyaltyProgram', {
+      method: 'post',
+      body: JSON.stringify(form_data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((res) => {
+      return res.json();
+    }).then((data) => {
+      console.log('server gave back:');
+      console.log(data);
+    })
+
+    /* */
+    /* */
+    /* */
+    // joinLoyaltyProgram(form_data);
   })
+
+// async function joinLoyaltyProgram(form_data) {
+//   try {
+//     const response = await fetch(url + '/joinLoyaltyProgram', {
+//       method: 'post',
+//       body: JSON.stringify(form_data),
+//       headers: {
+//         'Content-Type': 'application/json'
+//       }
+//     });
+//     if (!response.ok) {
+//       throw new Error(`Response status: ${response.status}`);
+//     }
+
+//     const json = await response.json();
+//     console.log(json);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
 
   $('.flip-card').on('click', function(){
     var $this_flip_card = $(this);
