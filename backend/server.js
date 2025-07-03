@@ -1,5 +1,5 @@
 // Import express module
-const express = require('express'); // use express for easier code for requests
+const express = require('express'); // use express for easier code syntax for HTTP requests
 const cors = require('cors');
 const helpers = require('./helpers'); // load helper functions from the JS file i made for them
 
